@@ -1,26 +1,26 @@
 # Project Nebula Security Policy
-
-This security policy documents how to record a security vulnerability in Nebula
-web app and how the Project Nebula maintainers respond to such inquiries.
+This security policy documents how to record a security vulnerability in the
+UTD Survival Guide and how the Project Nebula maintainers respond to such
+inquiries.
 
 ## Supported Versions
-
 **The current pre-release version of the UTD Survival Guide will have security
 bugs fixed on an ad-hoc basis until the first public release.**
 
+Below is a table of what versions of Nebula Guide will have security
+vulnerabilities patched:
 | Version     | Supported |
 | ----------- | --------- |
 | Pre-release | :x:       |
 
 ## Reporting a Vulnerability
-
 If you notice a service vulnerability detectable in the user-facing portions
-of this app, contact the Nebula maintainers at development@acmutd.co
+of this app, contact the Nebula maintainers at nebula-maintainers@acmutd.co
 with the subject line `[nebula]: User-Facing Security Vulnerability`.
 
 If the issue is due to something internal - like a vulnerability in the app's
-library dependencies, open an [issue](https://github.com/acmutd/nebula/issues/new/choose)
-and tag it with the `vulnerability` label.
+library dependencies, open an [issue](https://github.com/acmutd/nebula-guide/issues/new/choose)
+and tag it with the `Type: Security Vulnerability` label.
 
 One a maintainer triages the issue and determines it to be an actual vulnerability,
 work will immediately begin to resolve it. The fix will be applied to the

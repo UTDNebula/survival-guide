@@ -1,6 +1,5 @@
 # UTD Survival Guide
-
-_UTD Survival Guide is a guide to being a college student and making the most of your time at UT Dallas._
+*UTD Survival Guide is a guide to being a college student and making the most of your time at UT Dallas.*
 
 **A work in progress**
 
@@ -34,12 +33,13 @@ Contributions are welcome!
 This project uses the MIT License.
 
 ### Process
-To get started, see the [issues](https://github.com/acmutd/nebula) for the repository.
+To get started, see the [contribution guide](./CONTRIBUTING.md). It'll tell you
+everything you need to know.
 
-See the [contribution guide](./docs/index.md) on how to get started.
+Once you're ready to make some changes, see the
+[issues](https://github.com/acmutd/nebula-guide/issues) for the repository.
 
 ### Set-up
-
 The following will clone the repository to your machine and start the local
 development server.
 
@@ -54,12 +54,10 @@ npm start
 ## Maintainers
 
 ### Contributors
-
 - Willie Chalmers III, Project Lead
 - Sahana Belatur, Developer
 
 ### Contact
-
 This project is maintained by ACM Development, a division of ACM UTD. If you have
 any questions about this project or Project Nebula, see the [#nebula-support](https://discord.com/channels/692266201644007424/811419400753905714)
 channel on the ACM Discord server (accessible at [acmutd.co/discord](https://acmutd.co/discord)).
