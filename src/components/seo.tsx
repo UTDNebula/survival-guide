@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 /**
  * Component properties for SEO.
@@ -19,7 +19,7 @@ interface SEOProps {
   /**
    * Additional meta tags to inject.
    */
-  meta?: { name: string; content: string }[];
+  meta?: { name: string, content: string }[];
 
   /**
    * The title of the page.
@@ -32,7 +32,12 @@ interface SEOProps {
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
-export default function SEO({ description = '', lang = 'en', meta = [], title }: SEOProps) {
+export default function SEO({
+  description = "",
+  lang = "en",
+  meta = [],
+  title,
+}: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -40,15 +45,18 @@ export default function SEO({ description = '', lang = 'en', meta = [], title }:
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+              summary
+            }
           }
         }
       }
-    `,
-  );
+    `
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -92,5 +100,5 @@ export default function SEO({ description = '', lang = 'en', meta = [], title }:
         },
       ].concat(meta)}
     />
-  );
+  )
 }
