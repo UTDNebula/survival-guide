@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'guide'
-    label: 'Guide'
-    folder: 'content/guide'
+  - name: 'Guide Content'
+    label: 'Content'
+    folder: 'content/'
     create: true
     slug: 'index'
     media_folder: ''
