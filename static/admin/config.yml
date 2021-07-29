@@ -2,15 +2,36 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
+publish_mode: editorial_workflow
+
+# Adds media library functionality
+# media_library:
+#   name: uploadcare
+#   config:
+#     publicKey: demopublickey
+
+site_url: https://utdsurvivalguide.netlify.app/
+
+# TODO: Add Nebula Logo
+# logo_url: https://your-site.com/images/logo.svg
+
+# Switch to True when search is implemented
+search: false
+
 media_folder: static/img
 public_folder: /img
 
+# Each of these collections will be a seperate item in the Admin Sidebar
+# Other collections could be useful, for example to structure content by major or year
 collections:
   - name: 'Guide Content'
     label: 'Content'
+    description: 'This collection contains all of the content availible in the UTD Survival Guide'
     folder: 'content/'
     create: true
-    slug: 'index'
+    publish: true
+    extension: 'md'
+    slug: "{{slug}}_{{year}}-{{month}}-{{day}}"
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
