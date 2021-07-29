@@ -38,7 +38,10 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', required: true, widget: 'string' }
+      - { label: 'Publish Date', name: 'date', required: true, widget: 'datetime' }
+      - { label: 'Description', name: 'description', required: true, widget: 'string' }
+      - { label: 'Featured Post', name: 'Featured Post', required: true, widget: 'boolean' }
+      - { label: 'Featured Image', name: 'Featured Image', required: true, widget: 'image' }
+      - { label: 'Body', name: 'body', required: true, widget: 'markdown' }
+    sortable_fields: ['Title', 'date', 'ccommit_author' ]
