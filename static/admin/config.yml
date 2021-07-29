@@ -1,6 +1,16 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  repo: acmutd/nebula-guide
+  open_authoring: true
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
 
 publish_mode: editorial_workflow
 
@@ -44,4 +54,5 @@ collections:
       - { label: 'Featured Post', name: 'Featured Post', required: true, widget: 'boolean' }
       - { label: 'Featured Image', name: 'Featured Image', required: true, widget: 'image' }
       - { label: 'Body', name: 'body', required: true, widget: 'markdown' }
+      - { label: 'Tags', name: 'Tags', widget: 'list', allow_add: true, max: 10, default: ['Guide-Content'] }
     sortable_fields: ['Title', 'date', 'ccommit_author' ]

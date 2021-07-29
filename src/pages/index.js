@@ -10,6 +10,9 @@ import Landing from '../components/Landing';
 // - seperate data streams
 // - seperate pages with content for each page
 // - config the config file more
+// - https://www.netlifycms.org/docs/open-authoring/#linking-to-specific-entries-in-the-cms
+// - File size limit for uploads
+// - https://www.netlifycms.org/docs/beta-features/#nested-collections
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
