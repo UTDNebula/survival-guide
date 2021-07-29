@@ -7,7 +7,6 @@ import Seo from '../components/seo';
 import Landing from '../components/Landing';
 
 // TODO
-// - Seperate the landing page into a component
 // - seperate data streams
 // - seperate pages with content for each page
 // - config the config file more
