@@ -34,14 +34,14 @@ public_folder: /img
 # Each of these collections will be a seperate item in the Admin Sidebar
 # Other collections could be useful, for example to structure content by major or year
 collections:
-  - name: 'Guide Content'
+  - name: 'Guide-Content'
     label: 'Content'
     description: 'This collection contains all of the content availible in the UTD Survival Guide'
     folder: 'content/'
     create: true
     publish: true
     extension: 'md'
-    slug: "{{slug}}_{{year}}-{{month}}-{{day}}"
+    slug: '{{slug}}_{{year}}-{{month}}-{{day}}'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
@@ -54,5 +54,12 @@ collections:
       - { label: 'Featured Post', name: 'Featured Post', required: true, widget: 'boolean' }
       - { label: 'Featured Image', name: 'Featured Image', required: true, widget: 'image' }
       - { label: 'Body', name: 'body', required: true, widget: 'markdown' }
-      - { label: 'Tags', name: 'Tags', widget: 'list', allow_add: true, max: 10, default: ['Guide-Content'] }
-    sortable_fields: ['Title', 'date', 'ccommit_author' ]
+      - {
+          label: 'Tags',
+          name: 'Tags',
+          widget: 'list',
+          allow_add: true,
+          max: 10,
+          default: ['Guide-Content'],
+        }
+    sortable_fields: ['Title', 'date', 'ccommit_author']

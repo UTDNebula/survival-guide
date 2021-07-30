@@ -13,6 +13,11 @@ import Landing from '../components/Landing';
 // - https://www.netlifycms.org/docs/open-authoring/#linking-to-specific-entries-in-the-cms
 // - File size limit for uploads
 // - https://www.netlifycms.org/docs/beta-features/#nested-collections
+// - search
+//   - https://www.algolia.com/blog/engineering/how-algolia-created-its-netlify-build-plugin/
+//   - https://mrkaluzny.com/blog/full-text-search-with-gatsby-and-netlify-cms/
+
+// TODO - get all attribute fields from graphql and filter by tags (similar to MVP)
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -23,7 +28,6 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Landing />
         <Seo title="All posts" />
-        <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the directory you specified
           for the "gatsby-source-filesystem" plugin in gatsby-config.js).
@@ -36,7 +40,6 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Landing />
       <Seo title="All posts" />
-      <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
