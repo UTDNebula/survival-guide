@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Landing from '../components/Landing';
 
-// TODO
+// things to look at/read - add to github at some point
 // - seperate data streams
 // - seperate pages with content for each page
 // - config the config file more
