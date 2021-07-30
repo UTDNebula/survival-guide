@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "nebula-guide",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "UTD Survival Guide",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "ACM Development",
   "dependencies": {
     "@types/react-helmet": "^6.1.2",
     "gatsby": "^3.10.1",
@@ -54,7 +54,7 @@
     "tailwindcss": "^2.0.3",
     "typescript": "^4.2.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/acmutd/nebula-guide#readme",
   "keywords": [
     "gatsby"
   ],
