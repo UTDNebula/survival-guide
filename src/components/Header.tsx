@@ -11,7 +11,7 @@ export interface HeaderProps {
 /**
  * The global site header.
  */
-export default function Header({ siteTitle }: HeaderProps) {
+export default function Header({ siteTitle = 'UTD Survival Guide' }: HeaderProps) {
   // TODO: Make header sticky and float above home page.
   return (
     <header className="p-4 bg-primary sticky top-0 shadow-md">

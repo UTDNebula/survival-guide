@@ -40,7 +40,10 @@ export default function SEO({ description = '', lang = 'en', meta = [], title }:
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+              summary
+            }
           }
         }
       }
@@ -59,6 +62,10 @@ export default function SEO({ description = '', lang = 'en', meta = [], title }:
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: 'og:type',
+          content: 'website',
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -73,6 +80,10 @@ export default function SEO({ description = '', lang = 'en', meta = [], title }:
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: ``,
         },
         {
           name: `twitter:card`,

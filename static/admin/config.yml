@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: feature/netlify-cms # Branch to update (optional; defaults to master)
+  repo: acmutd/nebula-guide
+  open_authoring: true
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
+publish_mode: editorial_workflow
+
+# Adds media library functionality
+# media_library:
+#   name: uploadcare
+#   config:
+#     publicKey: demopublickey
+
+site_url: https://utdguide.acmutd.co/
+
+# TODO: Add Nebula Logo
+# logo_url: https://your-site.com/images/logo.svg
+
+# Switch to True when search is implemented
+search: false
+
+media_folder: static/img
+public_folder: /img
+
+# Each of these collections will be a seperate item in the Admin Sidebar
+# Other collections could be useful, for example to structure content by major or year
+collections:
+  - name: 'faq-iems'
+    label: 'FAQ Snippets'
+    folder: 'content/faq'
+    create: true
+    slug: 'faq'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/faq'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'content'
+    label: 'Content'
+    description: 'This collection contains all of the content availible in the UTD Survival Guide'
+    folder: 'content/'
+    create: true
+    publish: true
+    extension: 'md'
+    slug: '{{slug}}_{{year}}-{{month}}-{{day}}'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', required: true, widget: 'string' }
+      - { label: 'Publish Date', name: 'date', required: true, widget: 'datetime' }
+      - { label: 'Description', name: 'description', required: true, widget: 'string' }
+      - { label: 'Featured Post', name: 'Featured Post', required: true, widget: 'boolean' }
+      - { label: 'Featured Image', name: 'Featured Image', required: true, widget: 'image' }
+      - { label: 'Body', name: 'body', required: true, widget: 'markdown' }
+      - {
+          label: 'Tags',
+          name: 'Tags',
+          widget: 'list',
+          allow_add: true,
+          max: 10,
+          default: ['Guide-Content'],
+        }
+    sortable_fields: ['Title', 'date', 'ccommit_author']
