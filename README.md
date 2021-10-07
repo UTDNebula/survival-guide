@@ -57,21 +57,10 @@ npm start
 
 (As for the rest, docs are coming soon™.)
 
-## Maintainers
-
-### Contributors
-
-- Willie Chalmers III, Project Lead
-- Sahana Belatur, Developer
-
 ### Contact
 
-This project is maintained by ACM Development, a division of ACM UTD. If you have
-any questions about this project or Project Nebula, see the [#nebula-support](https://discord.com/channels/692266201644007424/811419400753905714)
-channel on the ACM Discord server (accessible at [acmutd.co/discord](https://acmutd.co/discord)).
+This project is maintained by the Project Nebula Maintainers.
 
-For more formal inquiries, send us a message at [development@acmutd.co](mailto:development@acmutd.co)
-with "[nebula-guide]" in the title. Please be as detailed as possible so we can
-best assist you.
-
-![ACM Development](https://www.acmutd.co/brand/Development/Banners/light_dark_background.png)
+For more formal inquiries, send email nebula-maintainers@acmutd.co with
+"[guide]" in the subject line. Please be as detailed as possible so we can best
+assist you.
