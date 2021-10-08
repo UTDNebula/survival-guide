@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Willie Chalmers III <willie.chalmers@acmutd.co>",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@types/react-helmet": "^6.1.2",
     "gatsby": "^3.10.1",
