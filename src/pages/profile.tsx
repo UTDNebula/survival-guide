@@ -1,4 +1,4 @@
-import { PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
@@ -21,3 +21,13 @@ export default function IndexRoute({ data, location }: PageProps<DataProps>) {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

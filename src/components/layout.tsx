@@ -69,11 +69,13 @@ function QuickJump({ isActive, updateActive }: QuickJumpProps) {
   };
 
   React.useEffect(() => {
-    window.addEventListener('keydown', handler);
-    return () => {
-      window.removeEventListener('keydown', handler);
-    };
-  }, [window, handler]);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handler);
+      return () => {
+        window.removeEventListener('keydown', handler);
+      };
+    }
+  }, [typeof window !== 'undefined' ? window : null, handler]);
 
   return (
     isActive && (
