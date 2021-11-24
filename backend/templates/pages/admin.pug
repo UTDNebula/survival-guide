@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+
+block title
+  title Admin
+
+
+block content
+  main(id="page")
+    table#content.border-4.border-black.mx-auto.bg-white.mt-8
+      tr.border-b-2
+        th Page
+        th ID
+        th Path
+        th [Edit]
+      - for (let page of data)
+        tr.border-b
+          td #{page.title}
+          td #{page.id}
+          td: a(href=page.path) #{page.path}
+          td: a(href=page.path+"/edit") [Edit]

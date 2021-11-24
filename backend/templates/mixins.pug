@@ -1,0 +1,58 @@
+//- Button with standardized styling applied; use unless there's a particular reason to independently style button
+mixin button
+  button.border.rounded.px-1.text-sm.bg-gray-100.border-gray-400(class="hover:bg-blue-50")&attributes(attributes)
+    block
+
+//- Button that looks like a link with text "[remove]"; use whenever there's an option to remove a thing
+mixin remover
+  button.underline.text-blue-400.cursor-pointer.remover(class="hover:text-blue-700" name="remove")&attributes(attributes) [remove]
+
+//- Get date in central time in *Weekday, Month Day, Year, XX:XX AM/PM* format
+mixin date
+  span #{new Date().toLocaleString("en-US", {timeZone: "America/Chicago", month: 'long', weekday: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'})}
+
+//- Display content of one of the content types
+mixin content(el, id)
+  case el.type
+    when "heading"
+      //- Wrap headings in a relative container for the anchor link
+      div(class="mt-8 relative" id=id)
+        a(class="absolute text-lg -left-4" href=`#${id}`) #
+        h2(class="text-lg")&attributes(attributes) !{el.text}
+      
+    when "subheading"
+      h4.mt-3(id=id)&attributes(attributes) !{el.text}
+      
+    when "paragraph"
+      p(class="text-sm my-2" id=id)&attributes(attributes) !{el.text}
+      
+    when "image"
+      //- Image width goes by twelths of the overall content width
+      - const widthclass = `w-${el.width}/12`
+      img(
+        id=id
+        src=el.file
+        alt=el.alt
+        title=el.alt
+        class=`h-auto m-2 z-30 relative ${widthclass} ${el.position}`
+        draggable="false"
+      )
+      //- w-1/12 w-2/12 w-3/12 w-4/12 w-5/12 w-6/12 w-7/12 w-8/12 w-9/12 w-10/12 w-11/12 w-12/12
+
+//- Create breadcrumbs at the top of page where the path is divided into section links
+mixin breadcrumbs(path)
+  //- Breadcrumbs always start with GUIDE link
+  a(href="/guide") GUIDE
+  span &nbsp;>&nbsp;
+  span#breadcrumbs
+    //- For each path section that isn't the last, insert a new link and " > "
+    - const sections = path.split('/').slice(1, -1);
+    - let pstring = "";
+    - for (let s of sections)
+      - pstring += `/${s}`;
+      a(href=pstring) #{s.replace(/-/g, " ").toUpperCase()}
+      span &nbsp;>&nbsp;
+
+//- mimic .textContent function by removing tags
+mixin clean(text, length)
+  span #{text.replace(/<.*?>/g, "").slice(0, length)}

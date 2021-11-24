@@ -1,0 +1,60 @@
+extends ../layout.pug
+
+
+block title
+  title #{data.title}
+
+
+block content
+  main(class="flex justify-between items-stretch" id="page")
+    
+    //- Left pane, navigation
+    div(class="hidden xl:block w-64 bg-white py-4 px-4 flex-shrink-0")
+      //- Page title, links to title in main content section
+      h2(class="font-bold py-2")
+        a(href="#title" class="hover:text-blue-800") #{data.title}
+      
+      //- Nested bullet list containing all headers and subheaders, each have id link to main content
+      ul(class="list-disc list-inside text-sm pb-2 font-bold")
+        - for (let s = 0; s < data.content.length; s++)
+          - let el = data.content[s]
+          
+          //- If heading, simple bullet point
+          - if (el.type === "heading")
+            li: a(href=`#${s}` class="hover:text-blue-800")
+              +clean(el.text)
+          //- If subheading, bullet point within nested list
+          - else if (el.type === "subheading")
+            ul(class="list-disc list-inside pl-2"): li: a(href=`#${s}` class="hover:text-blue-800")
+              +clean(el.text)
+      
+      hr
+        
+        
+    //- Middle pane, content
+    #content(class="w-full 2xl:w-3/5 shadow-md bg-white my-10 mx-16 p-12")
+
+      //- Content heading contents
+      div(class="flex text-sm")
+        p(class="flex-grow font-bold") 
+          +breadcrumbs(data.path)
+        
+        p(class="font-bold pr-6") SEND FEEDBACK
+        p(class="font-bold") SHARE
+        
+      h1#title(class="text-4xl font-bold py-2") #{data.title}
+      
+      h4(class="font-bold") Last Updated #{data.lastupdated}
+      
+      p.text-sm.pt-3.mb-1 Contributors:
+      //- List all contributors
+      - for (name of data.contributors)
+        p(class="text-xs") #{name}
+      
+      //- Display each time of element (heading, subheading, paragraph, img) according to its rules  
+      - for (let s = 0; s < data.content.length; s++)
+        - let el = data.content[s]
+        +content(data.content[s], s)
+
+    //- Right pane, empty (used for keeping middle pane centered)
+    div(class="hidden 2xl:block w-64")

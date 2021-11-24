@@ -1,0 +1,25 @@
+main {
+  min-height: calc(100vh - 200px);
+}
+
+input:invalid {
+  background-color: pink;
+}
+
+/* nested bulleted lists get different styles */
+ul ul {
+  list-style-type: circle !important;
+}
+
+#contenteditorcontainer {
+  height: 36em;
+}
+
+#content a {
+  text-decoration: underline;
+  color: rgb(59, 130, 246);
+}
+
+#content :is(p, h1, h2, h4):empty {
+  background-color: rgb(239, 246, 255);
+}

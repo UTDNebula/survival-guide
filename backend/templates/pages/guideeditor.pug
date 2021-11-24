@@ -1,0 +1,219 @@
+extends ../layout.pug
+
+
+block title
+  title #{data.title}
+
+
+block scriptsbody
+  script(src="/scripts/guideeditor.js")
+  
+  
+prepend templates
+  template#content-editor
+    //- Note that .h-0 class; content-editor elements are minimized by default, though we could change this in the future
+    fieldset.border.border-dashed.border-black.px-2.overflow-hidden.h-0
+      //- Drag the legend to move the content-editor's position relative to the other content-editor elements
+      legend.ml-9.relative.cursor-move(class="px-0.5" draggable="true")
+        //- This button handles content-editor minimizing/expanding
+        button.text-blue-400.cursor-pointer.font-mono.text-sm.absolute.-left-9.bg-white(class="hover:text-blue-700 top-0.5" name="minimize") [+]
+        //- slots for element name and tag respectively eg. "Image" and "img"
+        slot(name="name")
+        span &nbsp;&lt;
+        slot(name="element")
+        span &gt;
+      //- Default slot for content-editor contents:
+      slot
+      div.text-sm.flex.flex-wrap.justify-between.items-center.py-1
+        //- Aside from dragging, there are also buttons for moving content-editor up and down:
+        +button(name="up") Go Up
+        +button(name="down") Go Down
+        //- Finally, a button to delete the content-editor and its associated content
+        +remover
+
+
+  template#image-editor
+    //- Display the image at top:
+    img.w-full.h-auto.my-2.block(name="image" draggable="false" src="/images/placeholder.png")
+    //- And the controls below:
+    div.text-sm.flex.flex-wrap.justify-between.items-center
+      //- Position controls how image floats in the page:
+      label(for="position") Position:
+      select.w-32.mb-1(name="position")
+        option(value="float-left" name="floatleft") Left
+        option(value="mx-auto" name="mxauto") Center
+        option(value="float-right" name="floatright") Right
+      //- Alttext controls both image's alt value and title value, which are kept the same
+      label(for="alttext") Alt Text:
+      input.w-32.bg-blue-100(type="text" name="alttext" minlength="1" required)
+      //- Size is how many twelfths the image is out of the overall guide width eg. value of 3 -> 3/12 -> 25% width
+      label(for="size") Size:
+      input.w-32(type="range" name="size" min="1" max="12" value="3")
+      //- Finally, this input allows the changing of the image
+      input.w-full.truncate.text-sm.mb-1(type="file" name="filename" accept=".jpeg,.jpg,.png,.gif")
+    
+        
+  template#contributor-editor
+    .text-xs
+      slot
+      +remover(class="ml-1")
+
+
+block content
+  main(class="flex justify-between items-stretch" id="page")
+    
+    //- left pane aims to provide most of the controls for the editor
+    //- this currently includes everything except adding/removing contributors, which might be something worth moving over in the future
+    div#leftpane(class="w-64 flex-shrink-0 bg-white py-4 px-4 order-first")
+      //- This hidden input is provided the id of the page being edited so that when we post back to server, we can tell it which page to update
+      input.hidden(value=data.id name="id")
+    
+      h2#title(class="font-bold py-2") #{data.title}
+      
+      //- Left pane sections are separated by hr tags
+      hr.my-2
+        
+      //- Content header
+      h2(class="font-bold flex align-center") 
+        //- Shortcut for expanding/collapsing all content-editor elements at once; convenient!
+        button.text-blue-400.cursor-pointer.font-mono(class="hover:text-blue-700" name="minimizeall") [+]
+        span.ml-1 Content
+      
+      
+      div#contenteditorcontainer(class="overflow-y-auto overflow-x-hidden")
+        //- For each item found in data.content...
+        - for (let s = 0; s < data.content.length; s++)
+          - let el = data.content[s]
+          
+          //- Create a content editor with a unique id 
+          //- (note we use prepend id numbers with the letter 'e' because numbers alone aren't valid selectors)
+          content-editor(class="w-full py-1 block" id="e" + s)
+            case el.type
+              //- headings and subheadings just involve inserting in the text
+              when "heading"
+                span(slot="name") Heading
+                span(slot="element") h2
+                p.font-bold.text-sm
+                  +clean(el.text)
+                
+              when "subheading"
+                span(slot="name") Subheading
+                span(slot="element") h4
+                p.font-bold.text-sm
+                  +clean(el.text)
+                
+              //- for paragraph, only take insert the first 100 chars (if that many exist) so that content-editor length isn't enormous
+              when "paragraph"
+                span(slot="name") Paragraph
+                span(slot="element") p
+                p.text-sm
+                  +clean(el.text, 100)
+                  span ...
+              
+              //- for image, put an image-editor into the default slot with necessary attributes set
+              when "image"
+                span(slot="name") Image
+                span(slot="element") img
+                //- inserting a custom template element directly into a slot doesn't work currently (this needs investigating)
+                //- so for now, just wrap the image-editor in a div container
+                div
+                  //- need to set currect option to selected eg. if el.position is float-right, we need t-floatright-selected="true"
+                  - const selection = {[`t-${el.position.replace("-", "")}-selected`]: "true"};
+                  image-editor.w-full.my-2(
+                    t-image-src=el.file 
+                    t-image-alt=el.alt 
+                    t-image-title=el.alt
+                    t-size-value=el.width
+                    t-alttext-value=el.alt
+                    t-filename-value=el.file
+                  )&attributes(selection)
+          
+      //- Buttons for adding the various types of content (plus their associated content-editor templates)
+      div.flex.flex-wrap.justify-around.w-full.text-sm.gap-1.mt-1
+        //- Note: there's a bad amount of repetition in terms of the heading/subheading/paragraph/image type listings in different places
+        //- It might be worth looking into making this dry-er, especially as we add more types of content (tables?)
+        +button(name="add" value="heading" class="w-24") + Heading <h2>
+        +button(name="add" value="subheading" class="w-24") + Subheading <h2>
+        +button(name="add" value="paragraph" class="w-24") + Paragraph <h2>
+        +button(name="add" value="image" class="w-24") + Image <h2>
+            
+      hr.my-2
+        
+      //- Current workflow for styling text is that you need to highlight it first, and then select a modifier to apply
+      h2(class="font-bold") Modify Highlighted Text:
+      #modifiers.flex.flex-wrap.text-sm.gap-1.my-1
+        //- value here determines which command to run with document.execCommand
+        button.border.p-1(class="hover:border-black" value="bold"): b Bold
+        button.border.p-1(class="hover:border-black" value="italic"): i Italics
+        button.border.p-1(class="hover:border-black" value="underline"): ins Underline
+        button.border.p-1(class="hover:border-black" value="strikeThrough"): s Strikethrough
+        button.border.p-1(class="hover:border-black" value="subscript"): sub Subscript
+        button.border.p-1(class="hover:border-black" value="superscript"): sup Superscript
+        //- Link is only one of these with custom logic since it requires providing a string to link to
+        button.border.p-1(class="hover:border-black" value="createLink") 
+          span.underline.text-blue-500 Link
+          span *
+          
+      label.text-sm(for="link") *Link URL:
+      //- input that lets url set where to link to; a link will not be added unless the url is valid ie. it has a matching pattern
+      //- the pattern regex here matches links that either begin with '/' (for our site), or links that contain '://' and a '.' (for global sites)
+      input.w-36.bg-blue-100.ml-1.text-sm(autocomplete="off" pattern="(.+://.+?\\..+)|(\/.*)" placeholder="e.g. /guide/page" name="link")
+          
+      hr.my-2
+
+      h2(class="font-bold") Set Tags:
+      //- Enumerate possible tags to set, as provided by the server:
+      div#tagselector.flex.flex-wrap
+        - for (let tag of tags)
+          //- If a tag is set, give it a blue background to indicate to the user
+          //- Note that this "includes" check is quadratic complexity, which probably doesn't matter now but is worth refactoring latter
+          button.m-1.px-1.border(class=`hover:border-black ${data.tags.includes(tag) ? "bg-blue-100" : ""}`) #{tag}
+          
+      hr.my-2
+
+      div.flex.flex-wrap.justify-around.mt-1
+        label(for="path") Path:
+        //- Pattern should start with but not end with '/', and contain only lowercase letters, numbers, dashes, and '/' in the middle
+        input.bg-blue-100.w-44(type="text" name="path" pattern="(/[a-z0-9\-]+)+" value=data.path autocomplete="off" placeholder="/example/path" required)
+          
+        //- Preview logic should be added at some point:
+        //- +button(id="add" name="preview" class="mt-2") Preview Changes
+        
+        //- Call the function to publish after checking to ensure validity:
+        +button(id="add" name="publish" class="mt-2") Publish Changes
+
+
+    //- editor content pane aims to be as similar to the regular guide content pane as possible in appearance
+    //- the primary difference is in the content editability of elements
+    div#content(class="w-full 2xl:w-3/5 shadow-md bg-white my-10 mx-16 p-12 border-2 border-dashed border-red-200")
+      div#top
+        //- Content heading contents
+        div(class="flex text-sm font-bold")
+          p(class="flex-grow font-bold") 
+            +breadcrumbs(data.path)
+                  
+          p(class="pr-6") SEND FEEDBACK
+          p SHARE
+          
+        h1#title(class="text-4xl py-2 font-bold" contenteditable) #{data.title}
+        
+        //- Set last updated to now since we're updating
+        h4(class="font-bold") 
+          span Last Updated&nbsp;
+          +date
+      
+        p.text-sm.pt-3.mb-1 Contributors:
+          
+        //- List all contributors with options to add, remove, and edit names
+        - for (name of data.contributors)
+          contributor-editor
+            span(contenteditable) #{name}
+        +button(class="block mb-8 mt-1" name="add") Add Name
+      
+      //- Display each time of element (heading, subheading, paragraph, img) according to its rules  
+      - for (let s = 0; s < data.content.length; s++)
+        +content(data.content[s], "e" + s)(contenteditable="true")
+
+
+    //- right pane, empty
+    div(class="hidden 2xl:block w-64")

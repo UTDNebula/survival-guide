@@ -1,0 +1,104 @@
+include mixins.pug
+
+doctype html
+html
+  head
+    block title
+      title UTD Survival Guide
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/styles/normalize.css")
+    link(rel="stylesheet" href="/styles/base.css")
+    link(rel="stylesheet" href="/styles/tailwind.css")
+    block scriptshead
+
+  body(class="bg-gray-100")
+    block templates
+      script(src="/scripts/templates.js")
+    
+    nav.w-full.h-16.grid.grid-cols-3.items-center.shadow-lg.bg-white.relative.z-30
+      a.font-bold.mx-10(class="hover:text-blue-800" href="/") UTD Survival Guide
+      input(class="rounded-sm bg-blue-100 placeholder-opacity-80 placeholder-black h-8 p-4" placeholder="SEARCH")
+      image(class="w-12 h-auto rounded-full border-2 border-gray-500 ml-auto mr-10" src="/images/avatar.png" alt="Avatar")
+
+    block content
+      main#page
+
+    footer(class="bg-green-800 text-white w-full pt-8")
+      div(class="grid grid-cols-4 px-8")
+        div(class="p-4")
+          h3(class="pb-2") A Project Nebula Project
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li Project Nebula Home
+            li Maintainer Docs
+            li Nebula Web
+            li Nebula Data Service
+            li Survival Guide
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li: a(href="/admin") Guide Admin Dashboard
+            li About the Guide
+            li Student Showcase
+            li Student Testimonials
+            li Content Standards
+            li Privacy Policy
+            li Terms of Service
+
+        div(class="p-4")
+          h3(class="pb-2") Guide Contents
+          h4(class="text-sm py-2") Preface: Admissions and the System
+          h4(class="text-sm py-2") Getting started with university life
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li Housing and dining
+            li Choosing your major
+            li Getting college credit
+          h4(class="text-sm py-2") How to more than survive in college
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li How to ace your classes
+            li Choosing coursework
+            li Connecting with your peers
+            li Getting involved on campus
+            li Finding help
+
+        div(class="p-4")
+          h3(class="pb-2") ...
+          h4(class="text-sm py-2") Preparing for Your Professional Career
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li Preparing for medical school
+            li Preparing for graduate school
+            li Preparing for industry/business
+          h4(class="text-sm py-2") Appendix/Index
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li Professor information
+            li Course information
+          h4(class="text-sm py-2") Student Showcases
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li Art
+            li Tech Projects
+          h4(class="text-sm py-2") Student Success Stories
+
+        div(class="p-4")
+          h3(class="pb-2") University Resources
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li UT Dallas Website
+            li Bursar's Office
+            li Office of Financial Aid
+            li Code of Conduct
+            li Student Employment
+          h4(class="text-sm py-2")
+          ul(class="list-disc list-inside text-sm pb-4 pl-2")
+            li AH
+            li ATEC
+            li BBS
+            li ECS
+            li IS/Undeclared
+            li JSOM
+            li NSM
+
+      div(class="flex px-8 py-4")
+        p(class="text-sm px-4") Join the Team
+        p(class="text-sm px-4") Become a Contributer
+
+      div(class="w-full bg-green-900 h-10 flex justify-around items-center")
+        p(class="text-sm") Built by the Project Nebula Maintainers
+
+    block scriptsbody
