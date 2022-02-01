@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, PageProps } from 'gatsby';
 
 import Header from './header';
 import Footer from './Footer';
@@ -14,7 +14,7 @@ import Footer from './Footer';
 /**
  * Default layout for the Guide.
  */
-export default function Layout({ children }): JSX.Element {
+export default function Layout({ children }: PageProps): JSX.Element {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
