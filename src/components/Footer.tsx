@@ -96,44 +96,38 @@ export default function Footer(): JSX.Element {
           </ul>
         </div> */}
         <div className="p-4">
-          <h1 className="text-subtitle1 py-2 font-semibold text-gray-100">ACM and Co.</h1>
+          <h1 className="text-subtitle1 py-2 font-semibold text-gray-100">
+            More from Project Nebula
+          </h1>
           <ul>
             <li>
-              <a className="hover:text-secondary" href="https://acmutd.co">
-                ACM UTD website
+              <a className="hover:text-secondary" href="https://about.utdnebula.com">
+                Project Nebula Home
               </a>
             </li>
             <li>
-              <a className="hover:text-secondary" href="https://github.com/acmutd/nebula">
+              <a className="hover:text-secondary" href="https://github.com/UTDNebula">
                 Project Nebula on GitHub
               </a>
             </li>
             <li>
               <a
                 className="hover:text-secondary"
-                href="https://github.com/acmutd/comet-data-service"
-              >
-                The Comet Data Service
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://github.com/acmutd">
-                Other ACM Development Projects
-              </a>
-            </li>
-            <li>
-              <a
-                className="hover:text-secondary"
-                href="https://github.com/acmutd/nebula-guide/blob/master/CONTRIBUTING.md"
+                href="https://github.com/UTDNebula/nebula-guide/blob/master/CONTRIBUTING.md"
               >
                 How to contribute
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-secondary" href="https://acmutd.co">
+                ACM UTD website
               </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="p-4 text-center text-caption bg-gray-800">
-        <div className="font-semibold">Built with ❤️ and 💻 by ACM Development</div>
+        <div className="font-semibold">Built with ❤️ and 💻 by the Project Nebula Maintainers</div>
         <div className="mt-1">Last updated {data.site.buildTime ?? 'Some time ago.'}</div>
       </div>
     </footer>
