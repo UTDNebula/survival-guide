@@ -1,66 +1,34 @@
-# UTD Survival Guide
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-_UTD Survival Guide is a guide to being a college student and making the most of your time at UT Dallas._
+## Getting Started
 
-**A work in progress**
+First, run the development server:
 
-## About
-
-College is difficult.
-
-Maybe you passed your standardized tests, did a bunch of extracurriculars, and
-chose a major.
-
-But what happens next? Now you're at this new place for four years (more or
-less), and it's nothing like you've experienced before. Even more frighening is
-what happens if you're not like most students. What if you're a non-traditional
-student who's coming from a community college? How about first-generation? What
-about if you're a veteran?
-
-Resources and information scattered throughout dozens of web pages, and even
-more is only spread through word-of-mouth.
-
-Why not document all of that information in one place?
-
-Part of [Project Nebula](https://github.com/acmutd/nebula-web), the UTD Survival
-Guide seeks to be _the_ place people go when they want honest, useful
-information about UTD and its students. Even more than that, the Guide will
-provide a glimpse of student life in an easy, accessible manner.
-
-This repository, `nebula-guide` contains code for the Guide's website.
-
-## Contributing
-
-Contributions are welcome!
-
-This project uses the MIT License.
-
-### Process
-
-To get started, see the [contribution guide](./CONTRIBUTING.md). It'll tell you
-everything you need to know.
-
-Once you're ready to make some changes, see the
-[issues](https://github.com/acmutd/nebula-guide/issues) for the repository.
-
-### Set-up
-
-The following will clone the repository to your machine and start the local
-development server.
-
-```shell script
-git clone https://github.com/acmutd/nebula-guide.git
-cd nebula-guide
-npm install
-npm start
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-(As for the rest, docs are coming soon™.)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Contact
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-This project is maintained by the Project Nebula Maintainers.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-For more formal inquiries, send email nebula-maintainers@acmutd.co with
-"[guide]" in the subject line. Please be as detailed as possible so we can best
-assist you.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
