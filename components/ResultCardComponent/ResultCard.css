@@ -1,0 +1,15 @@
+.result-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 18rem);
+}
+
+.result-card-image {
+    width: 12rem;
+}
+
+.result-card-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
