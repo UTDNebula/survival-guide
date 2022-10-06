@@ -1,0 +1,23 @@
+.Share_Button
+{
+    position: relative;
+    width: 119px;
+    height: 16px;
+    left: 723px;
+    top: 4px;
+
+    /* Button */
+
+    font-family: 'Jost';
+    src: local('Jost'), url(./Jost-VariableFont_wght.ttf) format('trueType');
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
