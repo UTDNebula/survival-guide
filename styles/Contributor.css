@@ -3,18 +3,11 @@
 .Contributor
 {
   position: relative;
+  height: max-content;
+  width: 500px;
   
   left: 72px;
   top: 125px;
-}
-
-.Contributor_Icon
-{
-  position: relative;
-  left: 11.43%;
-  right: 11.43%;
-  top: 25.8%;
-  bottom: 25.8%;
 }
 
 .Contributor_Title
@@ -28,7 +21,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 25px;
   /* identical to box height, or 150% */
 
   letter-spacing: 0.15px;
@@ -45,15 +38,16 @@
 
 .Contributor_Details
 {
-  /* position: relative; */
-  /* top: 200; */
+  position: relative;
+  left: 10px;
+
   /* Subtitle 2 */
 
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 8px;
   /* identical to box height, or 171% */
 
   color: #000000;
