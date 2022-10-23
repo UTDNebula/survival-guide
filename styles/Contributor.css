@@ -1,0 +1,60 @@
+@import "./Fonts/Fonts.css";
+
+.Contributor
+{
+  position: relative;
+  
+  left: 72px;
+  top: 125px;
+}
+
+.Contributor_Icon
+{
+  position: relative;
+  left: 11.43%;
+  right: 11.43%;
+  top: 25.8%;
+  bottom: 25.8%;
+}
+
+.Contributor_Title
+{
+  width: 91px;
+  height: 24px;
+
+  /* border: 2px solid #000000; */
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.15px;
+
+  color: #000000;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.Contributor_Details
+{
+  /* position: relative; */
+  /* top: 200; */
+  /* Subtitle 2 */
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  color: #000000;
+}
