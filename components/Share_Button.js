@@ -1,0 +1,22 @@
+function Share_Button(props)
+{
+  return (
+    <RWebShare
+      data = {{ 
+        url: props.url, 
+        text: "Share this Article", 
+        title: "Survival Guide"
+      }}
+    >
+      <button className = "Share_Button">
+        <img className = "Share_Button_Img"
+            src = {shareImg}
+            alt = "?"
+            width = "20"
+            height = "13"
+        />
+        SHARE
+      </button>
+    </RWebShare>
+  )
+}
