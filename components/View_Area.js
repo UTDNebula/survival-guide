@@ -1,20 +1,16 @@
 import React from 'react'
-import './View_Area.css'
-import './Header.js'
+import '../styles/View_Area.css'
 
-class View_Area extends React.Component
+export function View_Area(props)
 {
-    render()
-    {
-        return (
-            <div className="Background">
-                <div className="View-area">
-                    <Header
-                        url = "https://www.bing.com"
-                        title = "How to Survive and Thrive at UTD"
-                    />
-                </div>
-            </div>
-        )
-    }
+  return (
+    <div className="View-area">
+        <Header
+        url = {props.url}
+        date = {props.date}
+        title = {props.title}
+        contributors = {props.contributors}
+        />
+    </div>
+    )
 }
