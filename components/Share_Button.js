@@ -1,3 +1,6 @@
+import React from "react"
+import "../styles/Share_Button.css"
+
 function Share_Button(props)
 {
   return (
