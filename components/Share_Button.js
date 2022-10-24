@@ -1,7 +1,8 @@
 import React from "react"
 import "../styles/Share_Button.css"
+import {RWebShare} from 'react-web-share'
 
-function Share_Button(props)
+export function Share_Button(props)
 {
   return (
     <RWebShare
