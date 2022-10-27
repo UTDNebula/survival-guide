@@ -5,7 +5,7 @@ export function Content(props)
 {
     return (
         <div className = "Content">
-            {props.content.split('\n').map((str) => <p>{str}</p>)}
+            {props.content.split('\n').map((str) => <p key = {str}>{str}</p>)}
         </div>
   )
 };

@@ -1,5 +1,5 @@
 import React from "react"
-import "Hashtag.jss"
+import Hashtag from "./Hashtag.jss"
 import "../styles/Heading.css"
 
 export function Heading(props)

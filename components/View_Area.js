@@ -1,5 +1,6 @@
-import React from 'react'
-import '../styles/View_Area.css'
+import React from 'react';
+import Header from './Header.js';
+import '../styles/View_Area.css';
 
 export function View_Area(props)
 {

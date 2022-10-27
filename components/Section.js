@@ -1,6 +1,6 @@
 import React from "react";
-import "Heading.jss";
-import "Content.jss";
+import Heading from "./Heading.jss";
+import Content from "./Content.jss";
 import "../styles/Section.css";
 
 function Section(props)

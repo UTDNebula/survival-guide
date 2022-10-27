@@ -3,7 +3,7 @@ import "../styles/Share_Button.css"
 import {RWebShare} from 'react-web-share'
 import shareImg from "../public/Images/share.png"
 
-export function Share_Button(props)
+export default function Share_Button(props)
 {
   return (
     <RWebShare

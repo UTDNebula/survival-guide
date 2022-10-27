@@ -26,7 +26,7 @@ export function Contributor(props)
             <div
                 className = "Contributor_Details"
             >
-                {contributors.map((contributor) => <p>{contributor.name}, {contributor.email}</p>)}
+                {contributors.map((contributor) => <p key = {contributor.email}>{contributor.name}, {contributor.email}</p>)}
             </div>}
     </div>
   );

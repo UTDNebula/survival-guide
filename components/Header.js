@@ -1,8 +1,9 @@
 import React from 'react';
 import "../styles/Header.css";
-import "Title.js";
-import "Share_Button.js";
-import "Date.js";
+import Title from "./Title.js";
+import Share_Button from "./Share_Button.js";
+import Date from "./Date.js";
+import Contributor from "./Contributor.js";
 
 function Header(props)
 {
