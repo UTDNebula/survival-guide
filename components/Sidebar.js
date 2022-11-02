@@ -1,11 +1,13 @@
-import React from 'react';
 import '../styles/Sidebar.css';
 import Section from './Section.js';
+export default function Sidebar(){
 
-export default function Sidebar(props){
+    var data = [['Introduction','UTDallas','Nebula'], ['Second','UTD','Neb']];
+
     return(
         <div className='sidebar'>
-            <Section sectionName='Introduction'/>
+            <Section data={data[0]}/>
+            <Section data={data[1]}/>
         </div>
     )
 };
