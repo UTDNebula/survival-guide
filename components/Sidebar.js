@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.css';
+import '../styles/Sidebar.css';
 import Section from './Section.js';
 
 export default function Sidebar(props){
