@@ -1,0 +1,33 @@
+ul{ 
+    margin-left: 5px;
+}
+
+button
+{
+    height: 0px;
+    font-weight: bold;
+    color: orange;
+}
+.Section_Title
+{
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.Section_Title>img
+{
+    height: 15px;
+    width: 20px; 
+    padding-right: 8px;
+}
+
+.Section_Title>b
+{
+    font-size: 24px;
+    color: orange;
+}
+
