@@ -1,4 +1,5 @@
 import Article from './Article.js';
+import '../styles/Section.css'
 export default function Section(props){
     return (
         <ul>
