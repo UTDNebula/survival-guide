@@ -1,0 +1,21 @@
+.Index {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    left: 79vw;
+    top: -10px;
+  
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+  
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+  
+    color: #FAFAFA;
+    
+    background: #4659A7;
+    border-radius: 50px;
+}
