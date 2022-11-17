@@ -16,7 +16,12 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse):
     case'GET':
       getPost(req, res)
       break
-
+    case'DELETE':
+      deletePost(req, res)
+      break
+    case'PUT':
+      updatePost(req, res)
+      break
   }
   
 }  

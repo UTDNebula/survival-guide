@@ -12,36 +12,41 @@ async function getPosts(req: NextApiRequest,res: NextApiResponse):Promise<any>{
   }
 }
 
-//creates a post, http://localhost:3000/api/posts
+//creates a post, http://localhost:3000/api/posts/
 async function createPost(req: NextApiRequest,res: NextApiResponse):Promise<any>{
-  const { title, content } = req.body
-    if (!title || !content) {
+  const { title, contributers, tags } = req.body
+    if (!title || !contributers) {
       return res.status(422).json({
         message: 'include title and content'
       })
     }
+    const docCount = await Post.countDocuments()
+   
     const _postInput: PostInput = {
       title,
-      content
+      contributers,
+      tags,
+      page: docCount+1
     }
     const newPost = await Post.create(_postInput)
     return res.status(200).json({ data: newPost })
 }  
 
-//returns only one post, http://localhost:3000/api/posts
+//returns only one post, http://localhost:3000/api/posts/:page_number
 async function getPost(req: NextApiRequest,res: NextApiResponse):Promise<any>{
-  const { postID } = req.query
-  const post = await Post.findOne({ _id: postID })
+  const { page_number } = req.query
+  const post = await Post.findOne({ page: page_number })
     
     if(!post){
       return res.status(400).json({
-        message: `Post with id '${ postID } not found`
+        message: `Page ${ page_number } not found`
       })
     }
-    return res.status(200).json({ data: post})
+    console.log(page_number)
+    return res.status(200).json({ data: post })
 }
 
-//udpates a posts, http://localhost:3000/api/posts
+//udpates a posts, http://localhost:3000/api/posts/:page_number
 async function updatePost(req: NextApiRequest,res: NextApiResponse):Promise<any>{
   const { postID } = req.query
   const { title, content } = req.body
@@ -63,7 +68,7 @@ async function updatePost(req: NextApiRequest,res: NextApiResponse):Promise<any>
   return res.status(200).json({ data:postUpdated })
 }
 
-//deletes a posts, http://localhost:3000/api/posts
+//deletes a posts, http://localhost:3000/api/posts/:page_number
 async function deletePost(req: NextApiRequest,res: NextApiResponse):Promise<any>{
   const { postID } = req.query
 
