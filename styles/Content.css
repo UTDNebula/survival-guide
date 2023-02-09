@@ -1,0 +1,23 @@
+@import "./Fonts/Fonts.css";
+
+.Content
+{
+    position: relative;
+    width: 936px;
+    height: max-content;
+    left: 72px;
+    top: 15px;
+    /* bottom: 20px; */
+
+    /* Paragraph */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+
+    color: #000000;
+}
