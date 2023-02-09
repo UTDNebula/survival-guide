@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost'), url(./Jost-Regular.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./Roboto-Regular.ttf) format('trueType');
+}

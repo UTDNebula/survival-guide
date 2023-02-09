@@ -1,0 +1,26 @@
+@import './Fonts/Fonts.css';
+
+.Share_Button {
+  position: relative;
+  width: 119px;
+  height: 25px;
+  left: 950px;
+  top: 10px;
+  /* Button */
+
+  background-color: #ffffff;
+  border: none;
+  /* align-content: middle; */
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  /* text-align: start; */
+
+  color: #000000;
+}

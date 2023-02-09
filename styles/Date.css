@@ -1,0 +1,20 @@
+@import './Fonts/Fonts.css';
+
+.Date {
+  position: relative;
+  width: 216px;
+  height: 23px;
+  left: 72px;
+  top: 105px;
+
+  /* Headline/H6 */
+
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+
+  color: #000000;
+}

@@ -1,6 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -16,6 +20,10 @@ module.exports = {
         },
         light: '#F9F9FA',
         dark: '#1F201F',
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        display: ['Jost', 'Roboto', 'sans-serif'],
       },
       fontSize: {
         headline1: [
@@ -100,17 +108,6 @@ module.exports = {
         ],
       },
     },
-    // borderRadius: {
-    //   sm: 2,
-    //   md: 4,
-    //   lg: 8,
-    // },
-    fontFamily: {
-      sans: ['Roboto', 'ui-sans-serif', 'system-ui'],
-    },
+    plugins: [],
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

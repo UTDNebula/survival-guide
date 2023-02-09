@@ -1,9 +1,13 @@
 # UTD Survival Guide
-*UTD Survival Guide is a guide to being a college student and making the most of your time at UT Dallas.*
+
+![Vercel](https://vercelbadge.vercel.app/api/UTDNebula/survival-guide)
+
+_UTD Survival Guide is a personalized knowledge base guide to being a college student and making the most of your time at UT Dallas._
 
 **A work in progress**
 
 ## About
+
 College is difficult.
 
 Maybe you passed your standardized tests, did a bunch of extracurriculars, and
@@ -20,50 +24,47 @@ more is only spread through word-of-mouth.
 
 Why not document all of that information in one place?
 
-Part of [Project Nebula](https://github.com/acmutd/nebula-web), the UTD Survival
+Part of [Nebula Labs](https://utdnebula.com), the UTD Survival
 Guide seeks to be _the_ place people go when they want honest, useful
 information about UTD and its students. Even more than that, the Guide will
 provide a glimpse of student life in an easy, accessible manner.
 
-This repository, `nebula-guide` contains code for the Guide's website.
+This repository, `survival-guide` contains code for the Guide's website.
 
 ## Contributing
+
 Contributions are welcome!
 
 This project uses the MIT License.
 
 ### Process
+
 To get started, see the [contribution guide](./CONTRIBUTING.md). It'll tell you
 everything you need to know.
 
 Once you're ready to make some changes, see the
-[issues](https://github.com/acmutd/nebula-guide/issues) for the repository.
+[issues](https://github.com/UTDNebula/survival-guide/issues) for the repository.
 
 ### Set-up
+
 The following will clone the repository to your machine and start the local
 development server.
 
 ```shell script
-git clone https://github.com/acmutd/nebula-guide.git
-cd nebula-guide
-npm start
+git clone https://github.com/UTDNebula/survival-guide.git
+cd survival-guide
+npm install
+npm run dev
 ```
+
+**Note: If you are using Git on Windows, make sure you use Git Bash to run these commands.**
 
 (As for the rest, docs are coming soon™.)
 
-## Maintainers
-
-### Contributors
-- Willie Chalmers III, Project Lead
-- Sahana Belatur, Developer
-
 ### Contact
-This project is maintained by ACM Development, a division of ACM UTD. If you have
-any questions about this project or Project Nebula, see the [#nebula-support](https://discord.com/channels/692266201644007424/811419400753905714)
-channel on the ACM Discord server (accessible at [acmutd.co/discord](https://acmutd.co/discord)).
 
-For more formal inquiries, send us a message at [development@acmutd.co](mailto:development@acmutd.co)
-with "[nebula-guide]" in the title. Please be as detailed as possible so we can
-best assist you.
+This project is maintained by the Nebula Labs Maintainers.
 
-![ACM Development](https://www.acmutd.co/brand/Development/Banners/light_dark_background.png)
+For more formal inquiries, send an email to contact@utdnebula.com with
+"[survival-guide]" in the subject line. Please be as detailed as possible so we can best
+assist you.
