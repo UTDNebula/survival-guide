@@ -1,22 +1,20 @@
-@import "./Fonts/Fonts.css";
+@import './Fonts/Fonts.css';
 
-.Contributor
-{
+.Contributor {
   position: relative;
   height: max-content;
   width: 500px;
-  
+
   left: 72px;
   top: 125px;
 }
 
-.Contributor_Title
-{
+.Contributor_Title {
   width: 91px;
   height: 24px;
 
   /* border: 2px solid #000000; */
-  
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -28,7 +26,6 @@
 
   color: #000000;
 
-
   /* Inside auto layout */
 
   flex: none;
@@ -36,8 +33,7 @@
   flex-grow: 0;
 }
 
-.Contributor_Details
-{
+.Contributor_Details {
   position: relative;
   left: 10px;
 

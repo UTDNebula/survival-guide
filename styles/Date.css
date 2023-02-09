@@ -1,7 +1,6 @@
-@import "./Fonts/Fonts.css";
+@import './Fonts/Fonts.css';
 
-.Date
-{
+.Date {
   position: relative;
   width: 216px;
   height: 23px;

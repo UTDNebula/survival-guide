@@ -1,4 +1,1 @@
-export default function EntryPage({ }) {
-
-}
-
+export default function EntryPage({}) {}

@@ -1,21 +1,20 @@
-@import "./Fonts/Fonts.css";
+@import './Fonts/Fonts.css';
 
-.Hashtag
-{
-    position: relative;
-    width: 15px;
-    height: 29px;
-    left: 48px;
-    /* top: 289px; */
+.Hashtag {
+  position: relative;
+  width: 15px;
+  height: 29px;
+  left: 48px;
+  /* top: 289px; */
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    /* identical to box height */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height */
 
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 
-    color: #1ABCFE;
+  color: #1abcfe;
 }

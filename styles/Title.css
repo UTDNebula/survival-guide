@@ -1,7 +1,6 @@
-@import "./Fonts/Fonts.css";
+@import './Fonts/Fonts.css';
 
-.Title
-{
+.Title {
   position: relative;
   width: 654px;
   height: 64px;
@@ -16,7 +15,6 @@
   font-size: 44px;
   line-height: 64px;
   /* identical to box height */
-
 
   color: #000000;
 }
