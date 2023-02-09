@@ -57,6 +57,8 @@ npm install
 npm run dev
 ```
 
+**Note: If you are using Git on Windows, make sure you use Git Bash to run these commands.**
+
 (As for the rest, docs are coming soon™.)
 
 ### Contact
