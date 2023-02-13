@@ -1,0 +1,115 @@
+.error {
+  color: white;
+  background-color: red;
+}
+.Footer
+{
+  position: relative;
+  width: 85.65vw;
+  height: 250px;
+  left: 243px;
+  /* padding-top: 100px; */
+  top: 240px;
+
+  background: #FAFAFA;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+}
+
+.Footer_Logo
+{
+  position: relative;
+  width: 317px;
+  height: 89px;
+  left: 12px;
+  top: 75px;
+}
+
+.Footer_Divider
+{
+  position: relative;
+  width: 180px;
+  height: 0px;
+  left: -7.7vw;
+  top: 9vh;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.Footer_Sections
+{
+  position: relative;
+  height: 10vh;
+
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  /* display: flex; */
+  align-items: center;
+}
+
+.one
+{
+  position:relative;
+  width: 15vw;
+  left: 24vw;
+  top: -5vh;
+}
+
+.Website_Logo
+{
+  position: relative;
+  top: .8vh;
+  left: 9vw;
+  width: 30px;
+  height: 30px;
+}
+
+.Discord_Logo
+{
+  position: relative;
+  top: .8vh;
+  left: 4.9vw;
+  width: 30px;
+  height: 30px;
+}
+
+.Instagram_Logo
+{
+  position: relative;
+  top: .8vh;
+  left: 4vw;
+  width: 30px;
+  height: 30px;
+}
+
+.two
+{
+  position: relative;
+  width: 20vw;
+  left: 45vw;
+  top: -24.44vh;
+
+  text-decoration-line: underline;
+}
+
+.three
+{
+  position: relative;
+  width: 20vw;
+  left: 66vw;
+  top: -43.77vh;
+}
+
+.UTD_Logo
+{
+  position: relative;
+  width: 332px;
+  height: 46px;
+  /* top: 10vh; */
+  left: -1vw;
+}
