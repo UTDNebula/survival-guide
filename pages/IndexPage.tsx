@@ -2,8 +2,8 @@ export default function IndexPage() {
     return (
         <main className="w-full flex h-fit p-4 bg-indigo-100 justify-center px-10 py-12">
             <div className="container bg-white mx-auto px-6 h-fit pt-6 pb-10 rounded-lg">
-                <h2 className="font-jost text-5xl font-medium p-5">Index</h2>
-                <table className="font-semibold font-jost text-2xl w-full text-left table-fixed underline">
+                <h2 className="text-5xl font-medium p-5">Index</h2>
+                <table className="font-semibold text-2xl w-full text-left table-fixed underline">
                     <tbody>
                         <tr className="px-6 py-4">
                             <td className="px-6 py-4">

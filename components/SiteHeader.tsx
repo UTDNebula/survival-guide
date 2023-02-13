@@ -1,8 +1,4 @@
 import logo2 from '../public/Images/guide_logo2.png'
-import websiteLogo from '../public/Images/website_logo.png'
-import discordLogo from '../public/Images/discord_logo.png'
-import instagramLogo from '../public/Images/instagram_logo.png'
-import utdLogo from "../public/Images/utd_logo2.png"
 
 export default function SiteHeader() {
     return (

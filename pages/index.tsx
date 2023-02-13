@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import SiteHeader from '../components/SiteHeader'
 import IndexPage from './IndexPage'
-import Footer from '@/components/Footer'
+import SiteFooter from '../components/SiteFooter'
 export default function Home() {
   return (
       <div>
@@ -11,7 +11,7 @@ export default function Home() {
         </Head>
         <SiteHeader/>
         <IndexPage/>
-        <Footer/>
+        <SiteFooter/>
       </div>
   )
 }
