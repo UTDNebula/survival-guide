@@ -2,6 +2,8 @@ import Head from 'next/head'
 import SiteHeader from '../components/SiteHeader'
 import IndexPage from './IndexPage'
 import SiteFooter from '../components/SiteFooter'
+import Link from 'next/link';
+import LandingPage from './LandingPage';
 export default function Home() {
   return (
       <div>
@@ -10,7 +12,7 @@ export default function Home() {
           <link rel="shortcut icon" href="/favicon.svg" />
         </Head>
         <SiteHeader/>
-        <IndexPage/>
+        <LandingPage/>
         <SiteFooter/>
       </div>
   )
