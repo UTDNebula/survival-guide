@@ -16,19 +16,34 @@ export default function SiteFooter() {
               <li className="mb-2 pr-6">
                 Nebula Labs
                 <Link href="https://www.utdnebula.com/" className="hover:underline float-right">
-                  <img className="w-8 h-8 " src={websiteLogo.src} alt="Nebula logo" />
+                  <img
+                    className="w-8 h-8 "
+                    src={websiteLogo.src}
+                    alt="Visit the Nebula Labs website"
+                  />
                 </Link>
               </li>
               <li className="mb-2 pr-6">
                 Nebula Labs Instagram
-                <Link href="https://www.instagram.com/" className="hover:underline float-right">
-                  <img className="w-8 h-8" src={instagramLogo.src} alt="instagram logo" />
+                <Link
+                  href="https://www.instagram.com/utdnebula"
+                  className="hover:underline float-right"
+                >
+                  <img
+                    className="w-8 h-8"
+                    src={instagramLogo.src}
+                    alt="Check out Nebula Labs on Instagram"
+                  />
                 </Link>
               </li>
               <li className="pr-6">
                 Nebula Labs Discord
-                <Link href="https://www.discord.com/" className="hover:underline float-right">
-                  <img className="w-8 h-8" src={discordLogo.src} alt="discord logo" />
+                <Link href="https://discord.gg/tcpcnfxmeQ" className="hover:underline float-right">
+                  <img
+                    className="w-8 h-8"
+                    src={discordLogo.src}
+                    alt="Join the Nebula Labs Discord server"
+                  />
                 </Link>
               </li>
             </ul>
