@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function SiteHeader() {
   return (
-    <nav className="md:h-[56px] p-0 justify-between bg-neutral-50 shadow-[0_0px_4px_4px_rgba(0,0,0,0.25)] sticky top-0">
-      <div className="h-full md:flex md:justify-between md:items-center max-w-6xl mx-auto">
+    <nav className="md:h-[56px] p-0 justify-between bg-white shadow-[0_0px_4px_4px_rgba(0,0,0,0.25)] sticky top-0">
+      <div className="h-full md:flex md:justify-between md:items-center max-w-7xl mx-auto">
         <img className="h-[56px] md:max-h-full pl-4 pt-2" src={logo.src} alt="Nebula logo" />
         <div className="p-3 md:flex md:justify-between md:space-x-4">
           <Link
