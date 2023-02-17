@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Roboto, Jost } from '@next/font/google';
+import SiteHeader from '../components/SiteHeader';
 
 const sansFont = Roboto({
   weight: '500',
@@ -17,6 +18,7 @@ const displayFont = Jost({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={`${sansFont.variable} ${displayFont.variable} font-sans`}>
+      <SiteHeader />
       <Component {...pageProps} />
     </div>
   );

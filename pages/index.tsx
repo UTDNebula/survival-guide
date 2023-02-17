@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 
 export default function LandingPage() {
