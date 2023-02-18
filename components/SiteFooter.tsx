@@ -1,130 +1,71 @@
-export default function SiteFooter(): JSX.Element {
+import logo2 from '../public/Images/guide_logo2.png';
+import websiteLogo from '../public/Images/website_logo.png';
+import discordLogo from '../public/Images/discord_logo.png';
+import instagramLogo from '../public/Images/instagram_logo.png';
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function SiteFooter() {
   return (
-    <footer className="bg-gray-700 text-gray-200">
-      {/* TODO: Update footer once more pages have been created */}
-      {/* <div className="max-w-6xl mx-auto md:grid md:grid-cols-3 md:grid-gap-2 lg:grid-gap-4 "> */}
-      <div className="max-w-6xl mx-auto md:grid md:grid-cols-2 md:grid-gap-2 lg:grid-gap-4 ">
-        <div className="p-4">
-          <h1 className="text-subtitle1 py-2 font-semibold font-display text-gray-100">
-            Academic Resources
-          </h1>
-          <ul className="mt-2">
-            <li>
-              <a className="hover:text-secondary" href="https://www.utdallas.edu/finaid/">
-                Office of Financial Aid
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://bursar.utdallas.edu/">
-                Bursar Office
-              </a>
-            </li>
-          </ul>
-          <ul className="mt-2">
-            <li>
-              <a
-                className="hover:text-secondary"
-                href="https://engineering.utdallas.edu/engineering/academics/undergraduate-majors/undergrad-advising/"
-              >
-                ECS Advising
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://bbs.utdallas.edu/advising/">
-                BBS Advising
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://jindal.utdallas.edu/advising/">
-                JSOM Advising
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://nsm.utdallas.edu/advising/">
-                NSM Advising
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://is.utdallas.edu/contact/advisors/">
-                IS Advising
-              </a>
-            </li>
-            <li>
-              <a
-                className="hover:text-secondary"
-                href="https://atec.utdallas.edu/people/#_people-advisors"
-              >
-                ATEC Advising
-              </a>
-            </li>
-          </ul>
-          <ul className="mt-2">
-            <li>
-              <a className="hover:text-secondary" href="https://www.utdallas.edu/veterans/">
-                Military and Veteran Center
-              </a>
-            </li>
-          </ul>
+    <footer className="p-4 bg-white bg-neutral-50 border-2 border-slate-200 text-black">
+      <div className="container max-w-6xl mx-auto">
+        <div className="md:grid md:grid-cols-3 md:gap-0 md:divide-x md:divide-slate-400">
+          <div className="px-4">
+            <img className="my-4 w-30 h-20 self-center" src={logo2.src} alt="Nebula Labs" />
+          </div>
+          <div className="px-2 px-4">
+            <h2 className="my-2 text-lg font-semibold font-display">Contact Us</h2>
+            <ul className="space-y-1">
+              <li className="group">
+                <Link
+                  href="https://www.utdnebula.com/"
+                  className="block px-2 py-1 flex justify-between align-center space-x-4 hover:bg-slate-200 focus:bg-slate-200 focus:outline-none focus:ring focus:ring-blue-200 rounded-lg transition"
+                >
+                  <div className="align-middle">Nebula Labs</div>
+                  <Image
+                    className="relative w-8 h-8 object-contain"
+                    src={websiteLogo}
+                    alt="Visit the Nebula Labs website"
+                  />
+                </Link>
+              </li>
+              <li className="group">
+                <Link
+                  href="https://www.instagram.com/utdnebula"
+                  className="block px-2 py-1 flex justify-between align-center space-x-4 hover:bg-slate-200 focus:bg-slate-200 focus:outline-none focus:ring focus:ring-blue-200 rounded-lg transition"
+                >
+                  Nebula Labs Instagram
+                  <Image
+                    className="w-8 h-8 object-contain"
+                    src={instagramLogo}
+                    alt="Check out Nebula Labs on Instagram"
+                  />
+                </Link>
+              </li>
+              <li className="group flex flex-col justify-center">
+                <Link
+                  href="https://discord.gg/tcpcnfxmeQ"
+                  className="block px-2 py-1 flex justify-between align-center space-x-4 hover:bg-slate-200 focus:bg-slate-200 focus:outline-none focus:ring focus:ring-blue-200 rounded-lg transition"
+                >
+                  <div>Nebula Labs Discord</div>
+                  <Image
+                    className="w-8 h-8 object-contain"
+                    src={discordLogo}
+                    alt="Join the Nebula Labs Discord server"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="px-4">
+            <h2 className="my-2 text-lg font-semibold font-display">Copyright Notice</h2>
+            <p className="text-sm">
+              Survival Guide is published by Nebula Labs, a registered student organization at The
+              University of Texas at Dallas. The UTD Survival Guide is not an official publication
+              of UT Dallas and does not represent the views of the university or its officers.
+            </p>
+          </div>
         </div>
-        {/* TODO: Uncomment once guide structure is ready */}
-        {/* <div className="p-4">
-          <h1 className="text-subtitle1 py-2 font-semibold text-gray-100">
-            Guide Info
-          </h1>
-          <ul>
-            <li>
-              <Link to="/">Landing</Link>
-            </li>
-            <li>
-              <Link to="/terms">Terms of Service</Link>
-            </li>
-            <li>
-              <Link to="/privacy">Privacy Policy</Link>
-            </li>
-          </ul>
-        </div> */}
-        <div className="p-4">
-          <h1 className="text-subtitle1 py-2 font-semibold font-display text-gray-100">
-            More from Nebula Labs
-          </h1>
-          <ul>
-            <li>
-              <a className="hover:text-secondary" href="https://utdnebula.com">
-                Nebula Labs Website
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://github.com/UTDNebula">
-                Nebula Labs GitHub
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-secondary" href="https://planner.utdnebula.com">
-                Nebula Planner
-              </a>
-            </li>
-            <li>
-              <a
-                className="hover:text-secondary"
-                href="https://github.com/UTDNebula/survival-guide"
-              >
-                Survival Guide on GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                className="hover:text-secondary"
-                href="https://github.com/UTDNebula/survival-guide/blob/main/CONTRIBUTING.md"
-              >
-                How to contribute
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="p-4 text-center text-caption bg-gray-800">
-        <div className="font-semibold">Built with ❤️ and 💻 by Nebula Labs</div>
-        <div className="mt-1">Last updated some time ago.</div>
       </div>
     </footer>
   );

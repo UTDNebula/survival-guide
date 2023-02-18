@@ -22,8 +22,8 @@ module.exports = {
         dark: '#1F201F',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        display: ['Jost', 'Roboto', 'sans-serif'],
+        sans: ['var(--font-sans)', 'Roboto', 'sans-serif'],
+        display: ['var(--font-display)', 'Jost', 'Roboto', 'sans-serif'],
       },
       fontSize: {
         headline1: [
