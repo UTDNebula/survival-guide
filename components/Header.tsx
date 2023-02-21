@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Header.css';
+import styles from '../styles/Header.module.css';
 import ContributorList, { ContributorData } from './ContributorList';
 import ShareButton from './ShareButton';
 
@@ -10,13 +10,15 @@ interface HeaderProps {
   contributors: ContributorData[];
 }
 
-export default function Header({ title, url, date, contributors }: HeaderProps) {
+export default function PageHeader({ title, url, date, contributors }: HeaderProps) {
   return (
-    <div className="Header">
+    <div className="pt-8">
+      <div className="flex space-x-8">
+        <div className="text-[60px] font-bold font-display">{title}</div>
+      </div>
       <ShareButton url={url} />
-      <div>{title}</div>
-      <div className="Date">Last Edited {date}</div>;
-      <div className="Contributor_Title">Contributors</div>
+      <div className="">Last Edited {date}</div>
+      <div className={styles.ContributorTitle}>Contributors</div>
       <ContributorList contributors={contributors} />
     </div>
   );

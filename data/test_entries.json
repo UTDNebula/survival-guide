@@ -1,78 +1,222 @@
 [
   {
     "title": "How to Survive and Thrive at UTD",
-    "slug": "introduction"
+    "slug": "introduction",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
+  },
+  {
+    "title": "This is a test entry.",
+    "slug": "test",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "How to get involved with student life",
-    "slug": "get-involved"
+    "slug": "get-involved",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Building Relationships with Professor",
-    "slug": "contacting-professors"
+    "slug": "contacting-professors",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   },
   {
     "title": "Getting an Internship",
-    "slug": "get-internship"
+    "slug": "get-internship",
+    "authors": [
+      {
+        "name": "Willie Chalmers III",
+        "email": "test@example.com"
+      }
+    ],
+    "content": "# Test"
   }
 ]

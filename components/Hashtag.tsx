@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Hashtag.css';
+import styles from '../styles/Hashtag.module.css';
 
 interface HashtagProps {
   heading: string;
@@ -7,7 +7,7 @@ interface HashtagProps {
 
 export default function Hashtag({ heading }: HashtagProps) {
   return (
-    <div className="Hashtag" id={heading.split(' ').join('_')}>
+    <div className={styles.Hashtag} id={heading.split(' ').join('_')}>
       #
     </div>
   );
