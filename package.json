@@ -11,6 +11,7 @@
     "format": "prettier --write --ignore-unknown ."
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.26.5",
     "@next/font": "^13.1.6",
     "next": "^13.1.6",
     "prettier": "^2.8.4",
