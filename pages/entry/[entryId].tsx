@@ -91,7 +91,6 @@ export async function getStaticProps({
   params,
 }: GetStaticPropsContext): Promise<GetStaticPropsResult<EntryPageProps>> {
   const id = params?.entryId as string;
-  console.log(id);
   const data = await getEntryData(id);
   return {
     props: {
