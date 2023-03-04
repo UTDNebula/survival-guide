@@ -52,12 +52,12 @@ type EntryPageProps = {
 async function getEntryData(id: string): Promise<GuideEntry> {
   const entry = testEntries.find((entry) => entry.slug === id);
   if (entry) {
-    console.log('Content', (await remark().use(html).process(entry.content)).toString());
-    return {
+    const data = {
       ...entry,
       lastUpdated: new Date(entry.lastUpdated).valueOf(),
       content: (await remark().use(html).process(entry.content)).toString(),
     };
+    return data;
   } else {
     throw new Error('Invalid entry ID provided.');
   }
@@ -91,6 +91,7 @@ export async function getStaticProps({
   params,
 }: GetStaticPropsContext): Promise<GetStaticPropsResult<EntryPageProps>> {
   const id = params?.entryId as string;
+  console.log(id);
   const data = await getEntryData(id);
   return {
     props: {

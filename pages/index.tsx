@@ -67,9 +67,8 @@ async function fetchEntries(): Promise<Article[]> {
   return test_entries;
 }
 
-export async function getStaticProps({ }): Promise<GetStaticPropsResult<LandingPageProps>> {
+export async function getStaticProps({}): Promise<GetStaticPropsResult<LandingPageProps>> {
   const entries = await fetchEntries();
-  console.log(entries);
   return {
     props: {
       articles: entries,
