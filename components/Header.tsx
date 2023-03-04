@@ -20,9 +20,8 @@ export default function PageHeader({ title, url, date, contributors }: HeaderPro
           <ShareButton url={url} />
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 space-y-2">
         <div className="font-display text-xl">Last Edited {date}</div>
-        <div className="font-display text-xl">Contributors</div>
         <ContributorList contributors={contributors} />
       </div>
     </div>

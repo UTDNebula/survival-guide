@@ -7,9 +7,9 @@ export type ContributorData = {
 
 function ContributorChip({ email, name }: ContributorData) {
   return (
-    <p key={email}>
-      {name}, {email}
-    </p>
+    <span>
+      {name} ({email})
+    </span>
   );
 }
 
@@ -25,9 +25,12 @@ export default function ContributorList({ contributors }: ContributorListProps) 
   };
 
   return (
-    <div className="" onClick={handleClick}>
+    <div onClick={handleClick}>
+      <div className="font-display text-lg underline cursor-pointer">
+        {active ? 'Hide' : 'See'} contributors
+      </div>
       {active && (
-        <div className="">
+        <div>
           {contributors.map((contributor) => (
             <ContributorChip key={contributor.email} {...contributor} />
           ))}
