@@ -78,7 +78,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
         },
       };
     }),
-    fallback: true,
+    fallback: false,
   };
 }
 
