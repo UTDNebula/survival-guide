@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from '../styles/ContributorList.module.css';
 
 export type ContributorData = {
   email: string;
@@ -26,9 +25,9 @@ export default function ContributorList({ contributors }: ContributorListProps) 
   };
 
   return (
-    <div className={styles.Contributor} onClick={handleClick}>
+    <div className="" onClick={handleClick}>
       {active && (
-        <div className={styles.Contributor_Details}>
+        <div className="">
           {contributors.map((contributor) => (
             <ContributorChip key={contributor.email} {...contributor} />
           ))}

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles/Header.module.css';
 import ContributorList, { ContributorData } from './ContributorList';
 import ShareButton from './ShareButton';
 
@@ -17,8 +16,8 @@ export default function PageHeader({ title, url, date, contributors }: HeaderPro
         <div className="text-[60px] font-bold font-display">{title}</div>
       </div>
       <ShareButton url={url} />
-      <div className="">Last Edited {date}</div>
-      <div className={styles.ContributorTitle}>Contributors</div>
+      <div className="font-display text-xl">Last Edited {date}</div>
+      <div className="font-display text-xl">Contributors</div>
       <ContributorList contributors={contributors} />
     </div>
   );
