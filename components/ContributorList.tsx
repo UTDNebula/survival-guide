@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/ContributorList.css';
 
 export type ContributorData = {
   email: string;
@@ -8,9 +7,9 @@ export type ContributorData = {
 
 function ContributorChip({ email, name }: ContributorData) {
   return (
-    <p key={email}>
-      {name}, {email}
-    </p>
+    <span>
+      {name} ({email})
+    </span>
   );
 }
 
@@ -26,9 +25,12 @@ export default function ContributorList({ contributors }: ContributorListProps) 
   };
 
   return (
-    <div className="Contributor" onClick={handleClick}>
+    <div onClick={handleClick}>
+      <div className="font-display text-lg underline cursor-pointer">
+        {active ? 'Hide' : 'See'} contributors
+      </div>
       {active && (
-        <div className="Contributor_Details">
+        <div>
           {contributors.map((contributor) => (
             <ContributorChip key={contributor.email} {...contributor} />
           ))}

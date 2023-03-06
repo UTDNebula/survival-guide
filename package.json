@@ -11,14 +11,18 @@
     "format": "prettier --write --ignore-unknown ."
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.26.5",
     "@next/font": "^13.1.6",
     "next": "^13.1.6",
     "prettier": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-web-share": "^2.0.2"
+    "react-web-share": "^2.0.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",

@@ -1,7 +1,6 @@
 import React from 'react';
 import { RWebShare } from 'react-web-share';
-import shareImg from '../public/Images/share.png';
-import '../styles/Share_Button.css';
+import ShareIcon from '../assets/Share.svg';
 
 interface ShareButtonProps {
   url: string;
@@ -16,9 +15,9 @@ export default function ShareButton({ url }: ShareButtonProps) {
         title: 'Survival Guide',
       }}
     >
-      <button className="Share_Button">
-        <img className="Share_Button_Img" src={shareImg.src} alt="?" width="20" height="13" />
-        SHARE
+      <button className="inline-flex p-2 space-x-2 bg-[#EFEFEF] rounded-lg font-display text-lg hover:bg-[#E0E0E0] transition ease-linear">
+        <img className="" src={ShareIcon.src} alt="" width="24" height="24" />
+        Share
       </button>
     </RWebShare>
   );
