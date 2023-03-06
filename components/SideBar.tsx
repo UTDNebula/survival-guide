@@ -1,6 +1,5 @@
 import ArticleList, { Article } from "./ArticleList";
 import Link from "next/link";
-import Heading from "./Heading"
 
 export type SideBarLink = {
     head: string;
@@ -25,7 +24,7 @@ function ArticleItem({ title, slug }: Article) {
   }
 
 function SideBarItem({ head, articles }: SideBarLink) {
-    const items = articles.map((article) => <ArticleItem {article.title, article.slug} {...article}/>);
+    const items = articles.map((article) => <ArticleItem key={article.slug} {...article}/>);
     return (
         <div>
             <h2>{head}</h2>
@@ -40,11 +39,8 @@ function SideBarItem({ head, articles }: SideBarLink) {
 function generateRoute(slug: string) {
     return `/entry/${slug}`;
   }
-  
-
-
 export default function SideBar({SideBarLinks}:SideBarLinks){
-    const articles = SideBarLinks.map((SideBarLink) => <SideBarItem key={SideBarLink.head, SideBarLink.articles} {...SideBarLink} />);
+    const articles = SideBarLinks.map((SideBarLink) => <SideBarItem key={SideBarLink.head}  {...SideBarLink}/>);
     return(
         <div>
             {articles}
