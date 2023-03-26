@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Project Nebula Support
-    url: https://acmutd.co/discord
-    about: Please ask and answer questions about Project Nebula development here.
+  - name: Nebula Labs Support
+    url: https://discord.gg/tcpcnfxmeQ
+    about: Join the Nebula Labs community here!
   - name: Report a security vulnerability
-    url: nebula-maintainers@acmutd.co
+    url: contact@utdnebula.com
     about: Please report security vulnerabilities here.
