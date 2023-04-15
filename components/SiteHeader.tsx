@@ -15,6 +15,12 @@ export default function SiteHeader() {
           >
             Articles
           </Link>
+          <Link
+            href="/glossary"
+            className="block text-center p-2 w-full md:w-auto rounded-full text-white font-bold bg-[#4659A7] hover:bg-[#3D4E94]"
+          >
+            Glossary
+          </Link>
         </div>
       </div>
     </nav>
