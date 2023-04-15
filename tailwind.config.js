@@ -26,9 +26,11 @@ module.exports = {
         display: ['var(--font-display)', 'Jost', 'Roboto', 'sans-serif'],
       },
       fontSize: {
-        headline1: [
-          '96px',
+        'display-extra-large': [
+          '86px',
           {
+            fontWeight: 800,
+            lineHeight: 124,
             letterSpacing: '-1.5px',
           },
         ],
