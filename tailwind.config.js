@@ -155,19 +155,6 @@ module.exports = {
             letterSpacing: '-0px',
           },
         ],
-        // ,
-        // caption: [
-        //   '12px',
-        //   {
-        //     letterSpacing: '0.4px',
-        //   },
-        // ],
-        // overline: [
-        //   '10px',
-        //   {
-        //     letterSpacing: '1.5px',
-        //   },
-        // ],
       },
     },
     plugins: [require('@tailwindcss/typography')],
