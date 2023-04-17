@@ -21,7 +21,7 @@ module.exports = {
           2: '#BEBEBE',
           3: '#909090',
           4: '#5C5C5C',
-          5: '#3D4E94',
+          5: '#353535',
           6: '#000000',
         },
         'neutral-variant': {
