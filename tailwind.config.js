@@ -8,106 +8,166 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: '#6470F7',
-          DEFAULT: '#2F3FF4',
-          dark: '#0B1CD5',
+        'primary-blue': {
+          1: '#E2E7FF',
+          2: '#ABBAF9',
+          3: '#4659A7',
+          4: '#394B9F',
+          5: '#3D4E94',
+          6: '#29376E',
         },
-        secondary: {
-          light: '#2FEEAB',
-          DEFAULT: '#11D08D',
-          dark: '#0C9766',
+        neutral: {
+          1: '#FFFFFF',
+          2: '#BEBEBE',
+          3: '#909090',
+          4: '#5C5C5C',
+          5: '#3D4E94',
+          6: '#000000',
         },
-        light: '#F9F9FA',
-        dark: '#1F201F',
+        'neutral-variant': {
+          1: '#FFFFFF',
+          2: '#BEC0C9',
+          3: '#83859B',
+          4: '#565970',
+          5: '#383849',
+          6: '#000000',
+        },
+        highlights: {
+          1: '#75B4C0',
+          2: '#6CCBB4',
+          3: '#32936F',
+          4: '#DD403A',
+          5: '#BB3F3C',
+          6: '#FFC077',
+        },
+        alternate: {
+          1: '#FDF2DF',
+          2: '#F8C67E',
+          3: '#F28F00',
+          4: '#E0F1EE',
+          5: '#59B19B',
+          6: '#2C8F75',
+        },
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'Roboto', 'sans-serif'],
-        display: ['var(--font-display)', 'Jost', 'Roboto', 'sans-serif'],
+        display: ['var(--font-display)', 'Jost', 'Roboto', 'sans-serif', 'Montserrat'],
       },
       fontSize: {
         'display-extra-large': [
           '86px',
           {
+            fontFamily: 'Jost',
             fontWeight: 800,
-            lineHeight: 124,
-            letterSpacing: '-1.5px',
+            lineHeight: 1.24,
+            letterSpacing: '-1px',
           },
         ],
-        headline2: [
-          '60px',
+        'display-large': [
+          '84px',
           {
+            fontFamily: 'Jost',
+            fontWeight: 300,
+            lineHeight: 1.21,
+            letterSpacing: '-1.25px',
+          },
+        ],
+        'title-large': [
+          '64px',
+          {
+            fontFamily: 'Jost',
+            fontWeight: 500,
+            lineHeight: 0.87,
+            letterSpacing: '-1.25px',
+          },
+        ],
+        'title-medium': [
+          '50px',
+          {
+            fontFamily: 'Jost',
+            fontWeight: 400,
+            lineHeight: 0.72,
+            letterSpacing: '-1.25px',
+          },
+        ],
+
+        'body-title': [
+          '34px',
+          {
+            fontFamily: 'Jost',
+            fontWeight: 600,
+            lineHeight: 0.49,
+            letterSpacing: '-1.25px',
+          },
+        ],
+
+        'footer-title': [
+          '18px',
+          {
+            fontFamily: 'Jost',
+            fontWeight: 500,
+            lineHeight: 0.26,
+            letterSpacing: '0px',
+          },
+        ],
+        'title-emphasis-large': [
+          '24px',
+          {
+            fontFamily: 'Montserrat',
+            fontWeight: 700,
+            lineHeight: 0.29,
             letterSpacing: '-0.5px',
           },
         ],
-        headline3: [
-          '48px',
-          {
-            letterSpacing: '0px',
-          },
-        ],
-        headline4: [
-          '34px',
-          {
-            letterSpacing: '0.25px',
-          },
-        ],
-
-        headline5: [
+        'title-content-large': [
           '24px',
           {
+            fontFamily: 'Montserrat',
+            fontWeight: 400,
+            lineHeight: 0.29,
+            letterSpacing: '-0.5px',
+          },
+        ],
+        'body-content': [
+          '20px',
+          {
+            fontFamily: 'Montserrat',
+            fontWeight: 500,
+            lineHeight: 0.29,
             letterSpacing: '0px',
           },
         ],
-
-        headline6: [
+        'subheading-content': [
           '20px',
           {
-            letterSpacing: '0.15px',
+            fontFamily: 'Jost',
+            fontWeight: 500,
+            lineHeight: 0.29,
+            letterSpacing: '0px',
           },
         ],
-        subtitle1: [
-          '16px',
-          {
-            letterSpacing: '0.15px',
-          },
-        ],
-        subtitle2: [
+        'footer-content': [
           '14px',
           {
-            letterSpacing: '0.1px',
+            fontFamily: 'Jost',
+            fontWeight: 500,
+            lineHeight: 0.2,
+            letterSpacing: '-0px',
           },
         ],
-        body1: [
-          '16px',
-          {
-            letterSpacing: '0.5px',
-          },
-        ],
-        body2: [
-          '14px',
-          {
-            letterSpacing: '0.25px',
-          },
-        ],
-        button: [
-          '14px',
-          {
-            letterSpacing: '1.25px',
-          },
-        ],
-        caption: [
-          '12px',
-          {
-            letterSpacing: '0.4px',
-          },
-        ],
-        overline: [
-          '10px',
-          {
-            letterSpacing: '1.5px',
-          },
-        ],
+        // ,
+        // caption: [
+        //   '12px',
+        //   {
+        //     letterSpacing: '0.4px',
+        //   },
+        // ],
+        // overline: [
+        //   '10px',
+        //   {
+        //     letterSpacing: '1.5px',
+        //   },
+        // ],
       },
     },
     plugins: [require('@tailwindcss/typography')],
