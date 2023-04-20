@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Chapter",
+      "slug": "C-1",
+      "authors": [
+        {
+          "name": "Willie Chalmers III",
+          "email": "test@example.com"
+        }
+      ],
+      "content": "test chapter",
+      "lastUpdated": "2023-02-23T20:40"
+    },
+    {
+      "title": "This is a test chapter.",
+      "slug": "test",
+      "authors": [
+        {
+          "name": "Willie Chalmers III",
+          "email": "test@example.com"
+        }
+      ],
+      "content": "# Test\nThis is the start of a sentence.",
+      "lastUpdated": "2023-02-23T20:40"
+    }
+  ]
+  
