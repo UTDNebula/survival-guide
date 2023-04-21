@@ -1,12 +1,14 @@
 import React from 'react';
 import { ContributorData } from './ContributorList';
 import Header from './Header';
+import ArticleList, { Article } from '../components/ArticleList';
 
 interface GuideChapterContentProps {
   url: string;
   date: number;
   title: string;
   contributors: ContributorData[];
+  entries: Article[];
   content: string;
 }
 
@@ -15,6 +17,7 @@ export default function GuideChapterContent({
   date,
   title,
   contributors,
+  entries,
   content,
 }: GuideChapterContentProps) {
   return (
@@ -26,6 +29,7 @@ export default function GuideChapterContent({
         contributors={contributors}
       />
       <div className="mt-4 prose lg:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
+      <ArticleList articles={entries} />
     </div>
   );
 }

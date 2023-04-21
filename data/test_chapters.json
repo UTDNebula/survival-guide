@@ -8,6 +8,12 @@
           "email": "test@example.com"
         }
       ],
+      "chapterEntries": [
+        {
+          "title": "First.",
+          "slug": "get-involved"
+        }
+      ],
       "content": "test chapter",
       "lastUpdated": "2023-02-23T20:40"
     },
@@ -18,6 +24,12 @@
         {
           "name": "Willie Chalmers III",
           "email": "test@example.com"
+        }
+      ],
+      "chapterEntries": [
+        {
+          "title": "This is a test entry under chapter.",
+          "slug": "test"
         }
       ],
       "content": "# Test\nThis is the start of a sentence.",

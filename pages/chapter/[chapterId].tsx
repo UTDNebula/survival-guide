@@ -8,6 +8,8 @@ import type {
   import html from 'remark-html';
   import GuideChapterBlock from '../../components/GuideChapterBlock';
   import testChapters from '../../data/test_chapters.json';
+  import { Article } from '../../components/ArticleList';
+
   export default function EntryPage({ chapter }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
       <div className="py-8 bg-[#e0ecfb] min-h-screen">
@@ -16,6 +18,7 @@ import type {
           date={chapter.lastUpdated}
           title={chapter.title}
           contributors={chapter.authors}
+          entries = {chapter.chapterEntries}
           content={chapter.content}
         />
       </div>
@@ -36,6 +39,7 @@ import type {
     slug: string;
     title: string;
     authors: Author[];
+    chapterEntries: Article[];
     content: string;
     /**
      * UNIX timestamp in milliseconds of when this entry was last updated.
