@@ -1,4 +1,5 @@
 import logo from '../public/Images/guide_logo.svg';
+import SearchSection from './SearchSection';
 import Link from 'next/link';
 
 export default function SiteHeader() {
@@ -8,6 +9,9 @@ export default function SiteHeader() {
         <Link href="/">
           <img className="h-[56px] md:max-h-full pl-4 pt-2" src={logo.src} alt="Nebula logo" />
         </Link>
+        <div>
+          <SearchSection />
+        </div>
         <div className="p-3 md:flex md:justify-between md:space-x-4">
           <Link
             href="/#featured"
