@@ -8,7 +8,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import GuideEntryBlock from '../../components/GuideEntryBlock';
 import testEntries from '../../data/test_entries.json';
-import {Author} from "../lib/Schema"
+import {Author} from "../../lib/Schema"
 
 export default function EntryPage({ entry }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
