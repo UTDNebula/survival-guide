@@ -1,0 +1,67 @@
+[
+    {
+      "title": "Overview: Getting Started at UTD",
+      "slug": "get-started",
+      "authors": [
+        {
+          "name": "Willie Chalmers III",
+          "email": "test@example.com"
+        }
+      ],
+      "chapterEntries": [
+        {
+          "title": "How to Survive and Thrive at UTD.",
+          "slug": "introduction"
+        },
+        {
+          "title": "How to get involved with student life.",
+          "slug": "get-involved"
+        },
+        {
+          "title": "Building Relationships with Professor.",
+          "slug": "contacting-professors"
+        },
+        {
+          "title": "Getting an Internship.",
+          "slug": "get-internship"
+        },
+        {
+          "title": "How to get involved with student life",
+          "slug": "get-involved-2"
+        },
+        {
+          "title": "Building Relationships with Professor",
+          "slug": "contacting-professors-2"
+        }
+      ],
+      "content": "Getting started as a Freshman can be challenging and overwhelming. To help you find your way, we have curated a list of articles to help you get started on your academic journey.",
+      "lastUpdated": "2023-02-23T20:40"
+    },
+    {
+      "title": "This is a test chapter.",
+      "slug": "test",
+      "authors": [
+        {
+          "name": "Willie Chalmers III",
+          "email": "test@example.com"
+        }
+      ],
+      "chapterEntries": [
+        {
+          "title": "This is a test entry under chapter.",
+          "slug": "test"
+        },
+        {
+          "title": "This is 2nd test entry under chapter.",
+          "slug": "get-involved"
+        },
+        {
+          "title": "This is 3rd test entry under chapter.",
+          "slug": "get-involved"
+        }
+      ],
+      "content": "# Getting started as a Freshman can be challenging and overwhelming. To help you find your way, we have curated a list of articles to help you get started on your academic journey.",
+      "lastUpdated": "2023-02-23T20:40"
+    }
+  ]
+  

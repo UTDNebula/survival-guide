@@ -1,7 +1,9 @@
 import type { GetStaticPropsResult, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import ArticleList, { Article } from '../components/ArticleList';
+import ArticleList from '../components/ArticleList';
+import {Article} from "../lib/Schema"
+
 import SiteFooter from '../components/SiteFooter';
 import test_entries from '../data/test_entries.json';
 

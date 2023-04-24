@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import {Article} from "../lib/Schema"
 
 function generateRoute(slug: string) {
   return `/entry/${slug}`;
@@ -17,10 +18,6 @@ function ArticleItem({ title, slug }: Article) {
   );
 }
 
-export type Article = {
-  title: string;
-  slug: string;
-};
 
 interface ArticleListProps {
   articles: Article[];
