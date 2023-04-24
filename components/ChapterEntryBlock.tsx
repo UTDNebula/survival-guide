@@ -3,7 +3,7 @@ import { ContributorData } from './ContributorList';
 import Header from './Header';
 import ArticleList from './ArticleList';
 import { Article } from '../lib/Schema';
-
+import ChapterEntryListView from './ChapterEntryListView';
 interface GuideChapterContentProps {
   url: string;
   date: number;
@@ -30,7 +30,7 @@ export default function GuideChapterContent({
         contributors={contributors}
       />
       <div className="mt-4 prose lg:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
-      <ArticleList articles={entries} />
+      <ChapterEntryListView articles={entries} />
       
     </div>
   );

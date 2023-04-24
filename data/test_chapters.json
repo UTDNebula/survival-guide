@@ -30,6 +30,14 @@
         {
           "title": "This is a test entry under chapter.",
           "slug": "test"
+        },
+        {
+          "title": "This is 2nd test entry under chapter.",
+          "slug": "get-involved"
+        },
+        {
+          "title": "This is 3rd test entry under chapter.",
+          "slug": "get-involved"
         }
       ],
       "content": "# Getting started as a Freshman can be challenging and overwhelming. To help you find your way, we have curated a list of articles to help you get started on your academic journey.",
