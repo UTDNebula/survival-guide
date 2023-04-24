@@ -8,7 +8,7 @@ import type {
   import html from 'remark-html';
   import GuideChapterBlock from '../../components/ChapterEntryBlock';
   import testChapters from '../../data/test_chapters.json';
-  import { Article } from '../../components/ArticleList';
+  import {Article, Author} from "../../lib/Schema"
 
   export default function EntryPage({ chapter }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
@@ -23,16 +23,6 @@ import type {
         />
       </div>
     );
-  }
-  
-  type Author = {
-    name: string;
-    email: string;
-  };
-  
-  type GuideEntry = {
-    entryTitle: string;
-    entrySlug: string
   }
 
   type GuideChapter = {

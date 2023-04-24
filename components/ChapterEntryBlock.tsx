@@ -1,7 +1,8 @@
 import React from 'react';
 import { ContributorData } from './ContributorList';
 import Header from './Header';
-import ArticleList, { Article } from './ArticleList';
+import ArticleList from './ArticleList';
+import { Article } from '../lib/Schema';
 
 interface GuideChapterContentProps {
   url: string;
@@ -30,6 +31,7 @@ export default function GuideChapterContent({
       />
       <div className="mt-4 prose lg:prose-xl" dangerouslySetInnerHTML={{ __html: content }} />
       <ArticleList articles={entries} />
+      
     </div>
   );
 }
