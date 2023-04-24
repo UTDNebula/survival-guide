@@ -6,7 +6,7 @@ import type {
   } from 'next/types';
   import { remark } from 'remark';
   import html from 'remark-html';
-  import GuideChapterBlock from '../../components/GuideChapterBlock';
+  import GuideChapterBlock from '../../components/ChapterEntryBlock';
   import testChapters from '../../data/test_chapters.json';
   import { Article } from '../../components/ArticleList';
 

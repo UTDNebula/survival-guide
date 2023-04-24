@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContributorData } from './ContributorList';
 import Header from './Header';
-import ArticleList, { Article } from '../components/ArticleList';
+import ArticleList, { Article } from './ArticleList';
 
 interface GuideChapterContentProps {
   url: string;
