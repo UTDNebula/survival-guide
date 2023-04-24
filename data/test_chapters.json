@@ -1,7 +1,7 @@
 [
     {
-      "title": "Chapter",
-      "slug": "C-1",
+      "title": "Overview: Getting Started at UTD",
+      "slug": "get-started",
       "authors": [
         {
           "name": "Willie Chalmers III",
@@ -10,11 +10,31 @@
       ],
       "chapterEntries": [
         {
-          "title": "First.",
+          "title": "How to Survive and Thrive at UTD.",
+          "slug": "introduction"
+        },
+        {
+          "title": "How to get involved with student life.",
           "slug": "get-involved"
+        },
+        {
+          "title": "Building Relationships with Professor.",
+          "slug": "contacting-professors"
+        },
+        {
+          "title": "Getting an Internship.",
+          "slug": "get-internship"
+        },
+        {
+          "title": "How to get involved with student life",
+          "slug": "get-involved-2"
+        },
+        {
+          "title": "Building Relationships with Professor",
+          "slug": "contacting-professors-2"
         }
       ],
-      "content": "test chapter",
+      "content": "Getting started as a Freshman can be challenging and overwhelming. To help you find your way, we have curated a list of articles to help you get started on your academic journey.",
       "lastUpdated": "2023-02-23T20:40"
     },
     {
