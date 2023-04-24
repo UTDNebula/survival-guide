@@ -10,10 +10,10 @@ function generateRoute(slug: string) {
 function ArticleItem({ title, slug }: Article) {
 return (
     <tr className="">
-        <th className='border border-slate-300 text-left py-4'>
+        <th className='border border-solid border-black/[.40] text-left py-4 bg-white'>
             <Link
                 href={generateRoute(slug)}
-                className="text-xl text-primary-light hover:text-primary-dark focus:text-primary-dark transition"
+                className="px-4 text-xl text-dark font-bold	hover:text-primary-dark focus:text-primary-dark transition"
             >
                 {title}
             </Link>
@@ -29,9 +29,9 @@ return (
   export default function ChapterEntryListView({ articles }: ArticleListProps) {
     const items = articles.map((article) => <ArticleItem key={article.slug} {...article} />);
     return (
-        <div className = "container mx-0 my-8 px-4 bg-[#E2E7FF] rounded-2xl">
-            <h2 className='py-4 text-2xl'>Articles</h2>
-            <table className='table-auto mx-auto my-auto w-full'>  
+        <div className = "mx-0 my-6 px-0 pb-4 bg-[#E2E7FF] rounded-2xl border border-solid border-black">
+            <h2 className='px-5 py-4 text-2xl font-semibold'>Articles</h2>
+            <table className='table-auto mx-auto my-auto w-full pb-8'>  
                 {items}
             </table>
         </div>
